@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+   <!-- <link href="enc/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="enc/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+	    <meta HTTP-EQUIV="Cache-Control" CONTENT="no cache">
+	    <meta HTTP-EQUIV="Pragma" CONTENT="no cache">
+	    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">        
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+<title>PAYBY</title>
+<style>    
+body {
+justify-content: center;
+box-sizing: border-box;
+font-family:'SF Pro';
+}
+@font-face {
+font-family:'SF Pro';
+src: url('enc/SFPro-Regular.woff2') format('woff2'),
+url('enc/SFPro-Regular.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+:where( form, .input-field, header) {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center
+}
+
+form .input-field {
+flex-direction: row;
+column-gap: 10px;
+margin:16px 0px 16px 0px ;
+
+}
+
+.input-field input {
+height: 50px;
+width: 50px;
+border-radius: 14px;
+outline: none;
+font-size: 1rem;
+text-align: center;
+border: 1px solid #ddd;
+background-color: #f5f6f7;
+}
+input:focus {
+background-color:#bbdaff26;
+border: 0.1px solid rgb(0 131 255 / 73);
+box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.input-field input::-webkit-inner-spin-button,
+.input-field input::-webkit-outer-spin-button {
+display: none;
+}
+
+.content
+{
+width: 500px;
+max-width: 100%;
+margin:auto;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+padding: 24px 30px;
+
+}  
+.logoLeft {
+height: 45px;
+}
+.logoRight {
+float: right;
+height: 45px;
+}
+.resend_btn {     
+color: #007bff;
+background-color: transparent;
+border: none;
+font-size:14px;
+position: relative;
+text-decoration:initial;
+font-family:'SF Pro';
+visibility: hidden; 
+text-decoration:none;
+}
+          
+.otpContent {       
+position: relative;
+margin-top:3em;
+
+}
+#first_text{
+line-height: 22px;
+font-family:'SF Pro';
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+color: var(--gray-gray-7-primary, #2A2B2F);
+}
+.otpContent_second
+{
+margin-top: 24px;
+position: relative;
+}
+
+#second_text{  
+font-family:'SF Pro';
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px;
+color: var(--gray-gray-6-secondary, #80868B);
+
+}
+#flasher{
+visibility: visible;479
+font-family:'SF Pro';
+font-size: 13px;
+font-weight: 200;
+font-style: normal; 
+line-height: 22px;
+color: var(--gray-gray-7-primary, #2A2B2F);
+margin:0px;
+}	
+
+
+form button {  
+margin :16px 0px 0px 0px;
+width:100%;
+height: 56px;
+padding: 16px; 
+font-size:16px;
+font-weight: 400;
+border-radius:10px;  
+color: #f5f6f7;
+background-color: #377AF6;
+border :none;
+font-family:'SF Pro';
+align-items: center;
+align-self: stretch;
+}
+
+#timer {
+color: #007bff;
+}
+                
+
+/* ADDED ON 08SEP22 BY MAMTA TOP LOGO */
+@media screen and (max-width:3000px) {
+.logoLeft {
+    height: 25px;
+}
+.logoRight {
+    height: 25px;
+}
+}
+@media screen and (max-width:2300px) {
+.logoLeft {
+    height: 25px;
+}
+.logoRight {
+    height: 25px;
+}
+}
+@media screen and (max-width:1900px) {
+.logoLeft {
+    height: 25px;
+}
+.logoRight {
+    height: 25px;
+}
+}
+@media screen and (max-width:1500px) {
+.logoLeft {
+    height: 25px;
+}
+.logoRight {
+    height: 25px;
+}
+}
+@media screen and (max-width:1100px) {
+.logoLeft {
+    height: 25px;
+}
+.logoRight {
+    height: 25px;
+}
+}
+@media screen and (max-width:1050px) {
+.logoLeft {
+    height: 30px;
+}
+.logoRight {
+    height: 30px;
+}
+}
+
+@media screen and (max-width:750px) {
+.logoLeft {
+    height: 35px;
+}
+.logoRight {
+    height: 35px;
+}
+}
+@media screen and (max-width:650px) {
+.logoLeft {
+    height: 35px;
+}
+.logoRight {
+    height: 35px;
+}
+}
+
+@media screen and (max-width:485px) {
+.logoLeft {
+    height: 25px;
+}
+.logoRight {
+    height: 25px;
+}
+}
+
+@media screen and (max-width:367px) {
+.logoLeft {
+    height: 22px;
+}
+.logoRight {
+    height: 22px;
+}
+}
+@media screen and (max-width:330px) {
+.logoLeft {
+    height: 18px;
+}
+.logoRight {
+    height: 18px;
+}
+}
+@media screen and (max-width:280px) {
+.logoLeft {
+    height: 12px;
+    
+}
+.logoRight {
+    height: 12px;
+    line-he
+}
+}
+@media screen and (max-width:200px) {
+.logoLeft {
+    height: 10px;
+    
+}
+.logoRight {
+    height: 10px;
+    
+}
+}
+@media screen and (max-width:200px) {
+.logoLeft {
+    height: 10px;
+    
+}
+.logoRight {
+    height: 10px;
+    
+}
+}
+/*media query for otp input box*/
+@media screen and (max-width:740px) {
+input {
+    
+    height:50px;
+    border-radius: 14px;
+}
+@media screen and (max-width:480px) {
+input {
+    
+    height:48px;
+    border-radius: 14px;
+}
+
+@media screen and (max-width:424px) {
+input {
+    
+    height:43px;
+    border-radius: 13px;
+}
+
+
+@media screen and (max-width:370px) {
+input {
+    
+    height:40px;
+    border-radius: 12px;
+}
+
+}
+@media screen and (max-width:347px) {
+input {
+   
+    height:32px;
+    border-radius: 10px;
+  }     
+}
+@media screen and (max-width:304px) {
+input {
+    
+    height:32px;
+    border-radius: 11px;
+}
+
+}
+@media screen and (max-width:286px) {
+input {
+    
+    height:30px;
+    border-radius: 10px;
+}
+
+}
+@media screen and (max-width:270px) {
+input {
+    
+    height:28px;
+    border-radius: 8px;
+}
+
+}
+@media screen and (max-width:259px) {
+input {
+    
+    height:25px;
+    border-radius: 5px;
+}
+
+}
+@media screen and (max-width:240px) {
+input {
+   
+    height:22px;
+    border-radius: 6px;
+}
+
+} 
+@media screen and (max-width:200px) {
+input {
+   
+    height:20px;
+    border-radius: 4px;
+}
+
+}  
+@media (min-devide-width:320px) and (max-device-width:768px){
+input {
+   
+    height:35px;
+    border-radius: 8px;
+}
+}
+ 	
+</style>  
+   
+ </head>
+<body onload="body();" class="content"> 
+ <form name="form1" action="%%RESPONSEURL%%"  method ="post" > 
+    <div>       
+      <div style="margin-top:1em;"> 
+         <img src="images/botim_payby.png" alt="botim_payby" class="logoLeft" />
+         <img src="images/mcidcheck.png" alt="mcidcheck" class="logoRight" />
+      </div>          
+      <div class="otpContent" >       
+          <p id="first_text">You are authorizing a payment to <span><strong>%%MERCHANTNAME%%</strong></span> for
+          <span><strong>%%AMOUNT%%</strong></span>.</p>
+        </div>     
+        <div  class="otpContent_second" >
+         <p  id ="second_text" > OTP has been sent to the registered mobile number <span style="font-weight:600;color: var(--gray-gray-7-primary, #2A2B2F);"><strong>XXXXXX%%MOBILE%%</strong></span> and valid for 5 minutes.</p>
+        </div>     
+          <div class="input-field">
+          <input type="password"  onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="1" inputmode="numeric"/>
+          <input type="password" disabled onkeypress="return event.charCode >= 48 && event.charCode <= 57"  maxlength="1" inputmode="numeric"/>
+          <input type="password" disabled onkeypress="return event.charCode >= 48 && event.charCode <= 57"  maxlength="1" inputmode="numeric" />
+          <input type="password" disabled onkeypress="return event.charCode >= 48 && event.charCode <= 57"  maxlength="1" inputmode="numeric" />
+          <input type="password" disabled onkeypress="return event.charCode >= 48 && event.charCode <= 57"  maxlength="1" inputmode="numeric"/>
+          <input type="password" disabled onkeypress="return event.charCode >= 48 && event.charCode <= 57"  maxlength="1" inputmode="numeric"/>
+        </div>           
+	 <div> 
+         <p id="flasher" > Request a new OTP if no OTP received within <span id="timer"></span></p>     
+        </div>                            
+ 	 <div style="text-align: center;">       
+          <a class="resend_btn" id="resend"  name="IDCT_BUT_NAME"  href="%%RESPONSEURL%%?resend=true" onclick="hrefcon = false;" ><strong>Resend OTP</strong></a>      
+        </div>   
+        <div style="margin-top:1em;">      
+         <button  id="IDCT_BUTID" name="IDCT_BUT_NAME" value="submit"  onclick= "needToConfirm = false;valid();" type="Submit"><strong>Submit</strong></button>     
+         </div >
+        <input name="MOBILE" value="%%MOBILE%%" type="hidden"  id="MOBILE" >
+    </div>
+  </form> 
+<script>
+function body() 
+{
+  const inputs = document.querySelectorAll("input"),
+  button = document.querySelector("button");
+alert("inside the funation")
+inputs.forEach((input, index1) => {
+  input.addEventListener("keyup", (e) => {
+    const currentInput = input,
+      nextInput = input.nextElementSibling,
+      prevInput = input.previousElementSibling;
+    if (currentInput.value.length > 1) {
+      currentInput.value = "";
+      return;
+    }
+    if (nextInput && nextInput.hasAttribute("disabled") && currentInput.value !== "") {
+   // alert("remove disable")
+      nextInput.removeAttribute("disabled");
+      nextInput.focus();
+    }
+    if (e.key === "Backspace") {
+      inputs.forEach((input, index2) => {
+        if (index1 <= index2 && prevInput) {
+          input.setAttribute("disabled", true);
+          input.value = "";
+          prevInput.focus();
+        }
+      });
+    }
+   
+  });
+});
+window.addEventListener("load", () => inputs[0].focus());
+setTimeout (function(){
+        },60000);
+        var countdownNum = 60;
+        incTimer();
+        function incTimer(){
+        setTimeout (function(){
+            if(countdownNum != 0)
+            {
+              countdownNum--;
+              document.getElementById("resend").style.visibility = "hidden";
+             document.getElementById('timer').innerHTML = countdownNum + ' seconds';          
+             incTimer();
+            }
+            else
+            {
+           document.getElementById("flasher").style.margin = "0px";
+             document.getElementById("resend").style.visibility = "visible";
+             document.getElementById("flasher").style.visibility = "hidden";   
+            }
+        },1000);
+        }
+}
+    </script>   
+  </body>
+</html>
+
